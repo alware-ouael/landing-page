@@ -27,7 +27,7 @@ function Clients() {
     const logosRepeated = [...clientLogos, ...clientLogos];
 
     return (
-        <section className="translate-y-[-70%] bg-white rounded-3xl py-6 px-4 mx-[6%] my-10 shadow-md overflow-hidden">
+        <section id='clients' className="translate-y-[-70%] bg-white rounded-3xl py-6 px-4 mx-[6%] my-10 shadow-md overflow-hidden">
             <div className="overflow-hidden">
                 <div
                     className="flex gap-8 min-w-max h-[100px] items-center animate-scroll"

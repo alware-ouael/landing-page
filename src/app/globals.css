@@ -2,9 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.title {
+  @apply text-3xl md:text-4xl font-bold text-mainBlue;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import type { PluginAPI } from 'tailwindcss/types/config';
 
 export default {
   content: [
@@ -18,10 +19,25 @@ export default {
         scroll: 'scroll 40s linear infinite',
       },
       colors: {
+        mainBlue:"#1A75BA",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }:PluginAPI) {
+      addUtilities({
+        '.hide-scrollbar': {
+          /* Works in most browsers */
+          '-ms-overflow-style': 'none', // IE & Edge
+          'scrollbar-width': 'none',    // Firefox
+        },
+        '.hide-scrollbar::-webkit-scrollbar': {
+          display: 'none',              // Chrome, Safari, Opera
+        },
+     
+      });
+    },
+  ],
 } satisfies Config;

@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef ,useState} from 'react'
+import React, {useState} from 'react'
 import Card from './Card';
 const solutions = [
   {
@@ -89,7 +89,6 @@ function Solutions() {
           hoveredIndex={hoveredIndex}
           setHoveredIndex={setHoveredIndex}
           title={item.title}
-          features={item.features}
           image={item.image}
         />
       ))}

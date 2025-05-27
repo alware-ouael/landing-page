@@ -5,7 +5,6 @@ import { ArrowRight } from 'lucide-react';
 type CardProps = {
   image: string;
   title: string;
-  features: string[];
   isFirst: boolean;
   index: number;
   hoveredIndex: number | null;
@@ -15,7 +14,6 @@ type CardProps = {
 function Card({
   image,
   title,
-  features,
   isFirst,
   index,
   hoveredIndex,
